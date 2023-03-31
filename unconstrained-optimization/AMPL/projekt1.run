@@ -1,0 +1,17 @@
+## Restart œrodowiska AMPL
+reset;
+
+#W Za³adowanie modelu
+model projekt1.mod;
+
+#W Za³adowanie danych
+data projekt1.dat;
+
+## Wybór solvera - zgodnie z treœci¹ zadania jest to MINOS
+option solver minos;
+
+## Rozwi¹zywanie zadania
+solve;
+
+## Wyœwietlenie rezultatów
+display  x_i, y_i, z_i, X, Y, Z, MNK, szerokosc, dlugosc;
